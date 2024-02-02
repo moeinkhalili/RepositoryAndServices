@@ -2,15 +2,15 @@
 
 namespace App\Repositories;
 
+use App\Interfaces\Repository\UserRepositoryInterface;
 use App\Models\User;
-use App\Repositories\Interface\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface
 {
 
     public function getAll()
     {
-        return User::all()->toArray();
+        return User::all()();
     }
 
     public function getById($id)

@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
+use App\Interfaces\Service\UserServiceInterface;
 use App\Repositories\UserRepository;
-use App\Services\Interface\UserServiceInterface;
 
 class UserService implements UserServiceInterface
 {
@@ -13,7 +13,7 @@ class UserService implements UserServiceInterface
         $this->userRepository = $userRepository;
     }
 
-    public function getAllUsers(): array
+    public function getAllUsers()
     {
         return $this->userRepository->getAll();
     }
